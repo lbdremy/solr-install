@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Clone INSTALL JETTY AND SOLR
-cd /tmp/
-git clone https://lbdremy@github.com/lbdremy/solr-install.git
-
 # Install dependencies
 sudo apt-get install openjdk-6-jre openjdk-6-jdk
 
