@@ -23,7 +23,7 @@ rm apache-solr-3.3.0.tgz
 sudo cp -R /tmp/apache-solr-3.3.0/example/solr/ $JETTY_HOME/
 
 # Copy Apache Solr Application (war file) to Jetty webapp directory
-sudo cp /tmp/apache-sorl-3.3.0/dist/apache-solr-3.3.0.war $JETTY_HOME/webapp/
+sudo cp /tmp/apache-sorl-3.3.0/dist/apache-solr-3.3.0.war $JETTY_HOME/webapps/
 
 # Copy Solr context from git repository
 sudo cp /tmp/solr-install/solr.xml $JETTY_HOME/contexts/
