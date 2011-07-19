@@ -4,7 +4,9 @@
 echo "Download dependencies"
 sudo apt-get install openjdk-6-jre openjdk-6-jdk
 
-#Create jetty user TODO
+#Create jetty user
+sudo groupapp -r jetty
+sudo useradd -M -r -g jetty jetty
 
 # Download and Install Jetty Server
 echo "Download and Install Jetty Server"
@@ -13,7 +15,8 @@ JETTY_VERSION=7.4.2.v20110526
 sudo wget http://download.eclipse.org/jetty/$JETTY_VERSION/dist/jetty-distribution-$JETTY_VERSION.tar.gz
 sudo tar xfz jetty-distribution-$JETTY_VERSION.tar.gz
 sudo rm jetty-distribution-$JETTY_VERSION.tar.gz
-JETTY_HOME=/usr/local/jetty-distribution-$JETTY_VERSION
+sudo mv jetty-distribution-$JETTY_VERSION jetty
+JETTY_HOME=/usr/local/jetty
 
 # Put a new jetty.xml file in JETTY_HOME/etc/
 # Now Jetty will listen on port 8983
@@ -33,12 +36,14 @@ sudo cp -R /tmp/apache-solr-3.3.0/example/solr/ $JETTY_HOME/
 
 # Copy Apache Solr Application (war file) to Jetty webapp directory
 echo "Copy Apache Solr Application (war file) to Jetty webapp directory"
-sudo cp /tmp/apache-sorl-3.3.0/dist/apache-solr-3.3.0.war $JETTY_HOME/webapps/apache-solr-3.3.0.war
+sudo cp /tmp/apache-solr-3.3.0/dist/apache-solr-3.3.0.war $JETTY_HOME/webapps/apache-solr-3.3.0.war
 
 # Copy Solr context from git repository
 echo "Copy Solr context from git repository"
 sudo cp /tmp/solr-install/solr.xml $JETTY_HOME/contexts/solr.xml
 
+# Permissions assignments
+sudo chown -R jetty:jetty $JETTY_HOME
 #Clean up
 echo "Clean up"
 sudo rm -R /tmp/apache-solr-3.3.0/
