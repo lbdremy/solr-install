@@ -18,7 +18,7 @@ JETTY_HOME=/usr/local/jetty-distribution-$JETTY_VERSION
 # Put a new jetty.xml file in JETTY_HOME/etc/
 # Now Jetty will listen on port 8983
 echo "Replaced old jetty.xml by a new one. Jetty will listen on 8983 port"
-sudo cp /tmp/solr-install/jetty.xml JETTY_HOME/etc/
+sudo cp /tmp/solr-install/jetty.xml $JETTY_HOME/etc/jetty.xml
 
 #Download and Install Apache Solr
 echo "Download and Install Apache Solr"
@@ -33,11 +33,11 @@ sudo cp -R /tmp/apache-solr-3.3.0/example/solr/ $JETTY_HOME/
 
 # Copy Apache Solr Application (war file) to Jetty webapp directory
 echo "Copy Apache Solr Application (war file) to Jetty webapp directory"
-sudo cp /tmp/apache-sorl-3.3.0/dist/apache-solr-3.3.0.war $JETTY_HOME/webapps/
+sudo cp /tmp/apache-sorl-3.3.0/dist/apache-solr-3.3.0.war $JETTY_HOME/webapps/apache-solr-3.3.0.war
 
 # Copy Solr context from git repository
 echo "Copy Solr context from git repository"
-sudo cp /tmp/solr-install/solr.xml $JETTY_HOME/contexts/
+sudo cp /tmp/solr-install/solr.xml $JETTY_HOME/contexts/solr.xml
 
 #Clean up
 echo "Clean up"
