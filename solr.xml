@@ -19,7 +19,7 @@ detected.
   <!--  + contextPath                                                  -->
   <!--  + war OR resourceBase                                          -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <Set name="contextPath">/sorl</Set>
+  <Set name="contextPath">/solr</Set>
   <Set name="war"><SystemProperty name="jetty.home" default="."/>/webapps/apache-solr-3.3.0.war</Set>
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
