@@ -7,6 +7,6 @@
     chmod +x install.sh
     ./install.sh
     cd /usr/local/jetty
-    java -jar start.java
+    sudo java -jar start.java
     
- + Now visit `localhost:8983/solr`
+ + Now visit `http://localhost:8983/solr`
