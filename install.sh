@@ -28,3 +28,6 @@ sudo cp /tmp/apache-sorl-3.3.0/dist/apache-solr-3.3.0.war $JETTY_HOME/webapps/
 # Copy Solr context from git repository
 sudo cp /tmp/solr-install/solr.xml $JETTY_HOME/contexts/
 
+#Clean up
+sudo rm -R /tmp/apache-solr-3.3.0/
+
