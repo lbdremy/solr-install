@@ -20,11 +20,11 @@ wget http://apache.mirrors.timporter.net/lucene/solr/3.3.0/apache-solr-3.3.0.tgz
 tar -xzf apache-solr-3.3.0.tgz
 
 # Move Apache Solr Configuration File to Jetty directory
-cp -R /tmp/apache-solr-3.3.0/example/solr /usr/local/jetty/
+sudo cp -R /tmp/apache-solr-3.3.0/example/solr /usr/local/jetty/
 
 # Copy Apache Solr Application (war file) to Jetty webapp directory
-cp /tmp/apache-sorl-3.3.0/dist/apache-solr-3.3.0.war /usr/local/jetty/webapp/
+sudo cp /tmp/apache-sorl-3.3.0/dist/apache-solr-3.3.0.war /usr/local/jetty/webapp/
 
 # Copy Solr context from git repository
-cp /tmp/solr-install/solr.xml /usr/local/jetty/contexts/
+sudo cp /tmp/solr-install/solr.xml /usr/local/jetty/contexts/
 
