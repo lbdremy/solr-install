@@ -2,7 +2,7 @@
 
 ##Get started
     cd /tmp/
-    git clone https://lbdremy@github.com/lbdremy/solr-install.git
+    git clone git@github.com:lbdremy/solr-install.git
     cd solr-install
     chmod +x install.sh
     ./install.sh
