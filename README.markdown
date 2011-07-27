@@ -2,11 +2,11 @@
 
 ##Get started
     cd /tmp/
-    git clone https://lbdremy@github.com/lbdremy/solr-install.git
+    git clone git@github.com:lbdremy/solr-install.git
     cd solr-install
     chmod +x install.sh
     ./install.sh
     cd /usr/local/jetty
-    java -jar start.java
+    sudo java -jar start.jar
     
- + Now visit `localhost:8983/solr`
+ + Now visit `http://localhost:8983/solr`

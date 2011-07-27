@@ -5,7 +5,7 @@ echo "Download dependencies"
 sudo apt-get install openjdk-6-jre openjdk-6-jdk
 
 #Create jetty user
-sudo groupapp -r jetty
+sudo groupadd -r jetty
 sudo useradd -M -r -g jetty jetty
 
 # Download and Install Jetty Server
