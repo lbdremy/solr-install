@@ -2,7 +2,7 @@
 
 # Install dependencies
 echo "Download dependencies"
-sudo apt-get install openjdk-6-jre openjdk-6-jdk
+sudo yum install openjdk-6-jre openjdk-6-jdk
 
 #Create jetty user
 sudo groupapp -r jetty
