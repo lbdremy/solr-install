@@ -2,7 +2,7 @@
 
 # Install dependencies
 echo "Download dependencies"
-sudo yum install openjdk-6-jre openjdk-6-jdk
+sudo yum install java-1.6.0-openjdk
 
 #Create jetty user
 sudo groupapp -r jetty
