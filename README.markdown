@@ -5,7 +5,6 @@
     git clone https://github.com/lbdremy/solr-install.git
     cd solr-install
     ./install.sh
-    cd /usr/local/jetty
-    sudo java -jar start.jar
+    sudo ./etc/init.d/jetty start
     
  + Now visit `http://localhost:8983/solr`
