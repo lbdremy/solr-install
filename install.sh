@@ -59,6 +59,10 @@ sudo cp $BASEDIR/conf/solr.xml $JETTY_HOME/contexts/solr.xml
 echo "Copy Solr Schema"
 sudo cp $BASEDIR/conf/schema.xml $JETTY_HOME/solr/conf/schema.xml
 
+# Copy the jetty startup script 
+echo "Copy the jetty startup script in /etc/init.d/"
+sudo cp $BASEDIR/conf/jetty.sh /etc/init.d/jetty
+
 # Permissions assignments
 sudo chown -R jetty:jetty $JETTY_HOME
 #Clean up
