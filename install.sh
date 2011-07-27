@@ -12,7 +12,8 @@ else
 fi
 
 #DIRS
-BASEDIR=$(dirname $0)
+SCRIPT=$(readlink -f $0)
+BASEDIR=`dirname $SCRIPT`
 TMP=/tmp
 HOME_INSTALL=/usr/local
 
