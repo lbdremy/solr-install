@@ -519,24 +519,20 @@
      Some fields are multiValued only because Tika currently may return
      multiple values for them.
    -->
-   <field name="title" type="text_general" indexed="true" stored="true" multiValued="true"/>
-   <field name="subject" type="text_general" indexed="true" stored="true"/>
-   <field name="description" type="text_general" indexed="true" stored="true"/>
-   <field name="comments" type="text_general" indexed="true" stored="true"/>
-   <field name="author" type="text_general" indexed="true" stored="true"/>
-   <field name="keywords" type="text_general" indexed="true" stored="true"/>
-   <field name="category" type="text_general" indexed="true" stored="true"/>
-   <field name="content_type" type="string" indexed="true" stored="true" multiValued="true"/>
-   <field name="last_modified" type="date" indexed="true" stored="true"/>
-   <field name="links" type="string" indexed="true" stored="true" multiValued="true"/>
    
    <!--
     Custom fields
    -->
-   <field name="delivery_price" type="float" indexed="true" stored="true" />
-   <field name="track" type="string" indexed="true" stored="true" />
+   <field name="title" type="text_general" indexed="true" stored="true" multiValued="true"/>
+   <field name="description" type="text_general" indexed="true" stored="true"/>
+   <field name="price" type="float" indexed="true" stored="true"/>
+   <field name="currency" type="string" indexed="true" stored="true"/>
+   <field name="url" type="string" indexed="true" stored="true"/>
+   <field name="url_display" type="string" indexed="true" stored="true"/>
    <field name="image1" type="string" indexed="true" stored="true" />
    <field name="image2" type="string" indexed="true" stored="true" />
+   <field name="category" type="text_general" indexed="true" stored="true" />
+
    <!-- catchall field, containing all other searchable text fields (implemented
         via copyField further on in this schema  -->
    <field name="text" type="text_general" indexed="true" stored="false" multiValued="true"/>
