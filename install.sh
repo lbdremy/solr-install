@@ -1,5 +1,4 @@
-#!/bin/bash -e
-# -e: Exit immediately if a command exits with a non-zero status.
+#!/bin/bash
 
 # Install dependencies depending of the distribution family
 echo "Download dependencies"
@@ -19,8 +18,11 @@ TMP=/tmp
 HOME_INSTALL=/usr/local
 
 # Create jetty user
-sudo groupadd -r jetty
-sudo useradd -M -r -g jetty jetty
+USER_EXIST=$(id -u jetty)
+if [ $USER_EXIST != 0 ]; then
+   sudo groupadd -r jetty
+   sudo useradd -M -r -g jetty jetty
+fi
 
 # Download and Install Jetty Server
 echo "Download and Install Jetty Server"
