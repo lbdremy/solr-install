@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -e
+# -e: Exit immediately if a command exits with a non-zero status.
 
 # Install dependencies depending of the distribution family
 echo "Download dependencies"
@@ -25,7 +26,7 @@ sudo useradd -M -r -g jetty jetty
 echo "Download and Install Jetty Server"
 cd $HOME_INSTALL
 JETTY_VERSION=7.4.2.v20110526
-sudo wget http://download.eclipse.org/jetty/$JETTY_VERSION/dist/jetty-distribution-$JETTY_VERSION.tar.gz
+sudo wget http://archive.eclipse.org/jetty/$JETTY_VERSION/dist/jetty-distribution-$JETTY_VERSION.tar.gz
 sudo tar xfz jetty-distribution-$JETTY_VERSION.tar.gz
 sudo rm jetty-distribution-$JETTY_VERSION.tar.gz
 sudo mv jetty-distribution-$JETTY_VERSION jetty
