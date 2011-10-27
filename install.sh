@@ -20,7 +20,7 @@ HOME_INSTALL=/usr/local
 
 # Create jetty user
 USER_EXIST=$(id -u jetty)
-if [ $USER_EXIST != 0 ]; then
+if [ $USER_EXIST == 0 ]; then
    sudo groupadd -r jetty
    sudo useradd -M -r -g jetty jetty
 fi
