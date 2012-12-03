@@ -43,17 +43,17 @@ sudo cp $BASEDIR/conf/jetty.xml $JETTY_HOME/etc/jetty.xml
 #Download and Install Apache Solr
 echo "Download and Install Apache Solr"
 cd $TMP
-wget http://apache.mirrors.timporter.net/lucene/solr/3.3.0/apache-solr-3.3.0.tgz
-tar -xzf apache-solr-3.3.0.tgz
-rm apache-solr-3.3.0.tgz
+wget http://apache.mirrors.timporter.net/lucene/solr/3.6.1/apache-solr-3.6.1.tgz
+tar -xzf apache-solr-3.6.1.tgz
+rm apache-solr-3.6.1.tgz
 
 # Move Apache Solr Configuration File to Jetty directory
 echo "Move Apache Solr Configuration File to Jetty directory"
-sudo cp -R $TMP/apache-solr-3.3.0/example/solr/ $JETTY_HOME/
+sudo cp -R $TMP/apache-solr-3.6.1/example/solr/ $JETTY_HOME/
 
 # Copy Apache Solr Application (war file) to Jetty webapp directory
 echo "Copy Apache Solr Application (war file) to Jetty webapp directory"
-sudo cp $TMP/apache-solr-3.3.0/dist/apache-solr-3.3.0.war $JETTY_HOME/webapps/apache-solr-3.3.0.war
+sudo cp $TMP/apache-solr-3.6.1/dist/apache-solr-3.6.1.war $JETTY_HOME/webapps/apache-solr-3.6.1.war
 
 # Copy Solr context from git repository
 echo "Copy Solr context from git repository"
@@ -71,7 +71,7 @@ sudo cp $BASEDIR/conf/jetty.sh /etc/init.d/jetty
 sudo chown -R jetty:jetty $JETTY_HOME
 #Clean up
 echo "Clean up"
-sudo rm -R $TMP/apache-solr-3.3.0/
+sudo rm -R $TMP/apache-solr-3.6.1/
 
 echo "Finish"
 echo "For launch Jetty and Solr, run the command java -jar start.jar in the directory $JETTY_HOME"
