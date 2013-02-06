@@ -1,5 +1,4 @@
-#!/bin/bash -e	 	
-# -e: Exit immediately if a command exits with a non-zero status.
+#!/bin/bash
 
 # Install dependencies depending of the distribution family
 echo "Download dependencies"
