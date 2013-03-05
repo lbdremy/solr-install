@@ -1,4 +1,4 @@
-#!/bin/bash -e	 	
+#!/bin/bash
 # -e: Exit immediately if a command exits with a non-zero status.
 
 # Install dependencies depending of the distribution family
