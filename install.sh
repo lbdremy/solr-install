@@ -43,7 +43,7 @@ sudo cp $BASEDIR/conf/jetty.xml $JETTY_HOME/etc/jetty.xml
 #Download and Install Apache Solr
 echo "Download and Install Apache Solr"
 cd $TMP
-wget http://apache.mirrors.timporter.net/lucene/solr/3.6.2/apache-solr-3.6.2.tgz
+wget http://archive.apache.org/dist/lucene/solr/3.6.2/apache-solr-3.6.2.tgz
 tar -xzf apache-solr-3.6.2.tgz
 rm apache-solr-3.6.2.tgz
 
